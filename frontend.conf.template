@@ -12,8 +12,6 @@ server {
     ssl_certificate         /var/www/letsencrypt/live/sbzbilling.com/fullchain.pem;
     ssl_certificate_key     /var/www/letsencrypt/live/sbzbilling.com/privkey.pem;
     
-    server_name             sbzbilling.com www.sbzbilling.com;
-    
     listen 80;
 
     # API Server
