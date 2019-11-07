@@ -6,11 +6,11 @@ server {
 }
 
 server {
-    listen 443              ssl http2;
-    listen [::]:443         ssl http2;
+    #listen 443              ssl http2;
+    #listen [::]:443         ssl http2;
 
-    ssl_certificate         /var/www/letsencrypt/live/sbzbilling.com/fullchain.pem;
-    ssl_certificate_key     /var/www/letsencrypt/live/sbzbilling.com/privkey.pem;
+    #ssl_certificate         /var/www/letsencrypt/live/ioupro.com/fullchain.pem;
+    #ssl_certificate_key     /var/www/letsencrypt/live/ioupro.com/privkey.pem;
     
     listen 80;
 
