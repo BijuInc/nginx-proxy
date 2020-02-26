@@ -1,6 +1,6 @@
 server {
     listen 80;
-    server_name  ioupro.com www.ioupro.com;
+    server_name  biju.io www.biju.io;
 
     # API Server
     location /api/ {
