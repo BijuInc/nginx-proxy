@@ -4,7 +4,7 @@ server {
 
     # Domain Validation
     location /.well-known/pki-validation {
-        index F99EAFC32753A7E20BCD3054D1BDA89F.txt
+        index F99EAFC32753A7E20BCD3054D1BDA89F.txt;
     }
     # API Server
     location /api/ {
