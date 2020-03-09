@@ -1,6 +1,11 @@
 server {
-    listen 80;
-    server_name  biju.io www.biju.io;
+    listen 443;
+
+    ssl on;
+
+    ssl_certificate /var/www/ssl/biju.io.crt;
+
+    ssl_certificate_key /path/to/your_private.key;
 
     # Domain Validation
     location /.well-known/pki-validation {
@@ -47,5 +52,12 @@ server {
     location = /50x.html {
         root   /usr/share/nginx/html;
     }
+
+    server_name biju.io www.biju.io;
+}
+server {
+    listen 80;
+    server_name  biju.io www.biju.io;
+    return 301 https://$server_name$request_uri;
 }
 
