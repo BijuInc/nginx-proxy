@@ -52,7 +52,7 @@ server {
     #     proxy_set_header X-Forwarded-Proto $scheme;
 
     #     proxy_pass https://cynthiabhoang.wixsite.com/biju-0509/;
-    }
+    # }
 
     #error_page  404              /404.html;
 
