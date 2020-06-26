@@ -1,6 +1,6 @@
 server {
-    server_name  biju.io www.biju.io;
-    return 301 https://biju.io$request_uri;
+    server_name  app.biju.io www.app.biju.io;
+    return 301 https://app.biju.io$request_uri;
 }
 server {
     listen 443; 
@@ -8,15 +8,15 @@ server {
     ssl_certificate /var/www/ssl/biju.io.crt;
     ssl_certificate_key /var/www/ssl/biju.io.key;
     
-    server_name www.biju.io;
-    return 301 https://biju.io$request_uri;
+    server_name www.app.biju.io;
+    return 301 https://app.biju.io$request_uri;
 }
 server {
     listen 443;
     ssl on;
     ssl_certificate /var/www/ssl/biju.io.crt;
     ssl_certificate_key /var/www/ssl/biju.io.key;
-    server_name biju.io;
+    server_name app.biju.io;
 
     # Domain Validation
     location /.well-known/pki-validation {
@@ -44,14 +44,14 @@ server {
         resolver 127.0.0.11;
     }
     # Marketing Page
-    location / {
-        proxy_set_header Host $host;
-        proxy_set_header X-HTTPS-Protocol $ssl_protocol;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
+    # location / {
+    #     proxy_set_header Host $host;
+    #     proxy_set_header X-HTTPS-Protocol $ssl_protocol;
+    #     proxy_set_header X-Real-IP $remote_addr;
+    #     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    #     proxy_set_header X-Forwarded-Proto $scheme;
 
-        proxy_pass  http://23.236.62.147;
+    #     proxy_pass https://cynthiabhoang.wixsite.com/biju-0509/;
     }
 
     #error_page  404              /404.html;
